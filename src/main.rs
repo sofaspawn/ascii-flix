@@ -5,7 +5,7 @@ use std::sync::mpsc;
 use std::time::Duration;
 use std::{thread, time};
 
-use crossterm::event::{self, Event, KeyCode, KeyEvent, KeyEventState};
+use crossterm::event::{self, Event, KeyCode, KeyEvent};
 use crossterm::terminal;
 use crossterm::{
     cursor::{Hide, MoveTo, Show},
@@ -28,7 +28,7 @@ fn map_range(from_range: (i32, i32), to_range: (i32, i32), s: i32) -> i32 {
     if from_min == from_max{
         panic!("Invalid from_range: start and end cannot be the same."); // highly unlikely but not impossible in case image is corrupted
     }
-     */
+    */
 
     to_min + (s - from_min) * (to_max - to_min) / (from_max - from_min)
 }
